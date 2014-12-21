@@ -1,4 +1,7 @@
-from distutils.core import setup
+try:
+    from setuptools import setup
+except ImportError:
+    from distutils.core import setup
 import os
 
 module_path = os.path.join(os.path.dirname(__file__), 'fabric_verbose.py')
@@ -17,8 +20,6 @@ setup(
     author='Suyeol Jeon',
     author_email='devxoul@gmail.com',
     url='https://github.com/devxoul/fabric-verbose',
-    download_url='https://pypi.python.org/packages/source/f/fabric-verbose/'
-                 'fabric-verbose-%s.tar.gz' % __version__,
     keywords=['Fabric', 'Verbose'],
     classifiers=[]
 )
